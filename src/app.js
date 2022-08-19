@@ -3,6 +3,7 @@ const cepRouter = require('./routes/cep.routes');
 
 const app = express();
 
+app.use(express.json());
 app.use('/cep', cepRouter);
 
-app.listen(3000, () => console.log('teste'))
+app.listen(3000, () => console.log('🚀'))

@@ -1,9 +1,8 @@
 const {Router} = require('express');
+const cepController = require('../controllers/cepController');
 
 const cepRouter = Router();
 
-cepRouter.get('/', (request, response) => {
-    response.send('ok')
-});
+cepRouter.get('/:codigo', cepController.show);
 
 module.exports = cepRouter;
